@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="EN"
+<head>
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Position practice</title>
+    <style>
+        .container {
+            width: 950px;
+            background-color: silver;
+            margin: 0px auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+       
+        .top-nav {
+            height: 150px;
+            background-color: green;
+            width: 100%;
+        }
+
+        .side-nav {
+          height: 300px;
+          width: 200px;
+          background-color: blue;  
+          margin-right: 10px;
+        }
+
+        .main {
+            height: 400px;
+            width: 700px;
+            background-color: red;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+        .sub-content {
+            height: 200px;
+            width: 210px;
+            background-color: yellow;
+            margin-bottom: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #advertisement {
+            height: 120px;
+            width: 100%;
+            background-color: purple;
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        .sub-content:nth-child(2) {
+            margin-left: 20px;
+        }
+        
+        .sub-content:nth-child(3) {
+            margin-left: 40px;
+        }
+
+        #advertisement {
+            margin-top: 20px;
+        }
+ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-nav"></div>
+        <div class="side-nav"></div>
+        <div class="main">
+            <div class="sub-content"></div>
+            <div class="sub-content"></div>
+            <div class="sub-content"></div>
+            <div id="advertisement"></div>
+    </div>
+  </div>
+</body>
+</html>
