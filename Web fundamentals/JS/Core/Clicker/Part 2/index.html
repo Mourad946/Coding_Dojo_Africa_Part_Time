@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Likes Counter</title>
+    <style>
+      /* Insert CSS code here */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      div {
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <strong>Some User</strong>
+      <span id="likes-count">3</span>
+      <span>like(s)</span>
+    </div>
+    <button id="like-button">Like</button>
+    <p>This is some filler text, it can say anything we like</p>
+
+    <script>
+      // Select the "likes-count" element and the "like-button" element
+      const likesCountElement = document.querySelector('#likes-count');
+      const likeButtonElement = document.querySelector('#like-button');
+
+      // Define a function to increase the number of likes by 1
+      function increaseLikes() {
+        // Get the current number of likes
+        const currentLikes = parseInt(likesCountElement.textContent);
+
+        // Increment the number of likes
+        likesCountElement.textContent = currentLikes + 1;
+      }
+
+      // Add an event listener to the "like-button" element to call the increaseLikes function when clicked
+      likeButtonElement.addEventListener('click', increaseLikes);
+    </script>
+  </body>
+</html>
