@@ -1,7 +1,6 @@
 class BankAccount:
     # Class attribute to keep track of all instances
     all_accounts = []
-
     def __init__(self, int_rate=0.0, balance=0.0):
         self.int_rate = int_rate
         self.balance = balance
