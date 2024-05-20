@@ -3,7 +3,7 @@ from Pet import Dog, Cat
 
 # Create instances of pets
 my_dog = Dog("Spike", ["fetch", "roll over"])
-my_cat = Cat("Jerry", ["jump", "purr"])
+my_cat = Cat("Tom", ["jump", "purr"])
 
 # Create a Ninja instance and assign the dog
 Ninja_with_Dog = Ninja("Akira", "Motohiro", "Yuki", "dog food", my_dog)
