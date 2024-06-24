@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ninja Gold Game</title>
+    <style>
+        .positive { color: green; }
+        .negative { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Your Gold: {{ gold }}</h1>
+    {% if win_message %}
+        <h2>{{ win_message }}</h2>
+    {% endif %}
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="farm">
+        <input type="submit" value="Find Gold at the Farm!">
+    </form>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="cave">
+        <input type="submit" value="Find Gold in the Cave!">
+    </form>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="house">
+        <input type="submit" value="Find Gold in the House!">
+    </form>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="casino">
+        <input type="submit" value="Find Gold at the Casino!">
+    </form>
+    {% if win_message %}
+        <form action="/reset" method="post">
+            <input type="submit" value="Reset Game">
+        </form>
+    {% endif %}
+    <h2>Activities:</h2>
+    <div>
+        {% for activity in activities %}
+            {% if 'Earned' in activity %}
+                <p class="positive">{{ activity }}</p>
+            {% else %}
+                <p class="negative">{{ activity }}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>
+
