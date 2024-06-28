@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="container">
+    <table class="table table-hover table caption-top">
+        <caption>Ninjas</caption>
+        <thead class="table-primary">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for ninja in dojo.ninjas %}
+                {%if ninja.firstname != none :%}
+                <tr>
+                    <th>{{ninja.firstname}}</th>
+                    <th>{{ninja.lastname}}</th>
+                    <th>{{ninja.age}}</th>
+                </tr>
+                {%endif%}
+            {%endfor%}
+        
+        </tbody>
+    </table>
+    <form action="" method="post">
+        <div class="d-flex justify-content-center">
+            <a href='/' class="btn btn-primary">Home</a>
+        </div>
+    </form>
+</body>
+</html>
